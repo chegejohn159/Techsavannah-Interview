@@ -15,7 +15,14 @@ To run spring boot, Run the following commands:
 # Frontend
 
 To Run Angular, Run the following commands:
-1. `ng serve`
+1. `npm install -g @angular/cli@14.2.12`
+2. `npm install`
+3. `ng serve`
+
+Once you have it up and running use below credentials to access the system
+
+`Username - mifos` <br/>
+`Password - password`
 
 ### NB:
 I am available in case of any support required, Thank you!

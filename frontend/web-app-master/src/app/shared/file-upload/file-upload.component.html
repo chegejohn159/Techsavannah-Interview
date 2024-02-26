@@ -1,0 +1,26 @@
+<div fxLayout="column">
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="2%">
+
+    <mat-form-field [fxFlex]="flex || '83%'">
+      <input matInput [readonly]="true" [value]="fileName || ''" placeholder="No file selected">
+    </mat-form-field>
+
+    <span fxFlex="10%" fxFlexAlign="center">
+    <button mat-button (click)="uploadFile.click()">
+      <fa-icon icon="folder-open" size="lg"></fa-icon>
+      &nbsp;&nbsp;
+      {{ 'labels.buttons.Browse' | translate }}
+    </button>
+  </span>
+
+  </div>
+
+  <div fxFlex="80%" *ngIf="file_size_error">
+    <mat-error >The File Exceeds 100kb Size Limit</mat-error>
+  </div>
+</div>
+
+
+
+
+<input type="file" #uploadFile accept="{{acceptFilter}}" (change)="onFileSelect($event)" [style.display]="'none'">
